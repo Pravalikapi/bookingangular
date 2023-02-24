@@ -1,0 +1,44 @@
+<!-- 
+
+ <form (ngSubmit)="getFilterByData(bookingFrom.value)">   <label for="checkinDate">Checkin Date:</label>   <input type="date" id="checkinDate" name="checkinDate" [(ngModel)]="selectedCheckinDate">   <button type="submit">Filter</button></form><ul *ngIf="filteredBookings">   <li *ngFor="let b of filteredBookings">{{ booking.name }}</li></ul>  -->
+
+
+
+<!-- 
+
+
+
+<input type="date"   #bookedFrom>
+<button (click)="getFilterData(bookedFrom.value)">Load Bookings</button>
+
+<div *ngFor="let b of filteredBookings">
+    <div> customerName: {{b.name}} </div>
+    <div>BookingId : {{b.bookingId}}</div>
+    
+    <hr>
+</div> -->
+
+
+<!-- <input type="date" #bookedFrom> 
+<button (click)="getFilterData(bookedFrom.value)">Load Bookings</button>
+
+<div *ngFor="let b of filteredBookings">
+  <div>customerName: {{ b.name }}</div>
+  <div>Bookingid {{ b.bookingId }}</div>
+</div> -->
+
+
+<input type="text"   #bookingId >
+<button (click)="getBookingsById(bookingId.value)">Load Details</button>
+
+<div *ngFor="let b of allBookings">
+    <div> Customer Name: {{b.name}} </div>
+    <div>Booking ID : {{b.bookingId}}</div>
+    <!-- <div>msg  :{{x.msg}}</div>
+    <div>starRating : {{x.starRating}}</div><br/> -->
+    <hr>
+</div>
+
+
+
+
